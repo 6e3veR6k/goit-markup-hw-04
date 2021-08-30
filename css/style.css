@@ -145,6 +145,10 @@ img {
 
 /* HEADER */
 /* nav list */
+.page-header {
+  border-bottom: solid 1px var(--header-border-bottom);
+}
+
 .page-header > .container {
   display: flex;
 }
@@ -186,6 +190,7 @@ img {
 }
 
 .nav-link {
+  position: relative;
   color: var(--font-accent-secodary-color);
 }
 
@@ -200,12 +205,31 @@ img {
   color: var(--font-accent-color);
 }
 
+.nav-link:hover::after,
+.nav-link:focus::after {
+  position: absolute;
+  bottom: calc(0% - 1px);
+  border-radius: 4px;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #2196f3;
+}
+
 /* MAIN */
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
 
   text-align: center;
+
+  background-image:
+    linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-our-compay.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-title {
@@ -240,7 +264,6 @@ img {
   padding-bottom: 94px;
 }
 
-
 .peculiarities-list {
   flex-wrap: wrap;
   margin-left: -30px;
@@ -255,6 +278,23 @@ img {
   margin-left: 30px;
 }
 
+.peculiarities-icon-wrapper {
+  display: flex;
+  align-items: center;
+  height: 120px;
+  background: var(--background-light-color);
+  border-radius: var(--btn-border-radius);
+  margin-bottom: 30px;
+}
+
+.icon-peculiarities {
+  display: block;
+  height: 70px;
+  width: 70px;
+
+  margin-right: auto;
+  margin-left: auto;
+}
 
 .peculiarities-item-title {
   margin-top: 0;
@@ -341,10 +381,6 @@ img {
   margin-bottom: 10px;
 }
 
-.portfolio-header {
-  border-bottom: solid 1px var(--header-border-bottom);
-}
-
 .portfolio-nav-list {
   flex-wrap: wrap;
   justify-content: center;
@@ -372,9 +408,9 @@ img {
   padding-bottom: 20px;
   padding-right: 24px;
   padding-left: 24px;
-  border-bottom: 1px solid #EEEEEE;
-  border-left: 1px solid #EEEEEE;
-  border-right: 1px solid #EEEEEE;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
 }
 
 .project-name {
@@ -403,7 +439,7 @@ img {
 }
 
 .page-footer .webstudio-logo-link {
-  margin-bottom:20px;
+  margin-bottom: 20px;
 }
 
 .footer-address {
