@@ -6,6 +6,7 @@
   --font-accent-color: #2196f3;
   --font-accent-secodary-color: #212121;
   --background-dark-color: #2f303a;
+  --foreground-icon-color: #AFB1B8;
   --background-light-color: #f5f4fa;
   --header-border-bottom: #ececec;
   --main-font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -287,13 +288,16 @@ img {
   margin-bottom: 30px;
 }
 
-.icon-peculiarities {
+.icon {
   display: block;
-  height: 70px;
-  width: 70px;
 
   margin-right: auto;
   margin-left: auto;
+}
+
+.icon-peculiarities {
+  height: 70px;
+  width: 70px;
 }
 
 .peculiarities-item-title {
@@ -371,7 +375,7 @@ img {
 
 .team-member-position {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 16px;
 }
 
 .team-member-name {
@@ -379,6 +383,34 @@ img {
   color: var(--font-accent-secodary-color);
   margin-top: 0;
   margin-bottom: 10px;
+}
+
+.socials-list-item + .socials-list-item {
+  margin-left: 10px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  padding: 11px;
+  border-radius: 50%;
+  color: var(--font-accent-secodary-color)
+}
+
+.small-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--foreground-icon-color);
+}
+
+.social-link:hover {
+  background-color: var(--font-accent-color);
+
+}
+
+
+.social-link:hover .small-icon {
+  fill: var(--font-light-color);
 }
 
 .portfolio-nav-list {
